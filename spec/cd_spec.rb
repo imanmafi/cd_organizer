@@ -21,6 +21,14 @@ describe (CD) do
     end
   end
 
+  describe('#id') do
+    it("returns the id of the album") do
+      new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
+      new_album.save
+      expect(new_album.id).to(eq(1))
+    end
+  end
+
   describe('.all') do
     it("returns an empty array before anything is added") do
       expect(CD.all).to(eq([]))

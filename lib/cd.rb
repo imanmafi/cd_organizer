@@ -5,6 +5,7 @@ class CD
   def initialize(album, artist)
     @album = album
     @artist = artist
+    @id = @@all_albums.length + 1
   end
 
   def album
@@ -13,6 +14,10 @@ class CD
 
   def artist
     @artist
+  end
+
+  def id
+    @id
   end
 
   def save
