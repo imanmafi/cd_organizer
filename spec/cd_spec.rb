@@ -35,6 +35,16 @@ describe (CD) do
     end
   end
 
+  describe('.all_artists') do
+    it("returns list of artists") do
+      new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
+      new_album.save
+      new_album_2 = CD.new("Drones", "Muse")
+      new_album_2.save
+      expect(CD.all_artists).to(eq(["Led Zeppelin", "Muse"]))
+    end
+  end
+
   describe('.clear') do
     it("clears the array") do
       new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
