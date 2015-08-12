@@ -44,4 +44,14 @@ describe (CD) do
     end
   end
 
+  describe('.find') do
+    it("finds the album based on id") do
+      new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
+      new_album.save
+      new_album_2 = CD.new("Drones", "Muse")
+      new_album_2.save
+      expect(CD.find(new_album_2.id)).to(eq(new_album_2))
+    end
+  end
+
 end

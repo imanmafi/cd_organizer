@@ -32,4 +32,14 @@ class CD
     @@all_albums = []
   end
 
+  define_singleton_method(:find) do |identification|
+    found_album = nil
+    @@all_albums.each do |album|
+      if album.id == identification
+        found_album = album
+      end
+    end
+    found_album
+  end
+
 end
