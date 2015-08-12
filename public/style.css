@@ -17,3 +17,33 @@
   background-color: #FFCEC2;
   color: #3D3D3D;
 }
+
+.album-create-form label{
+  font-size: 2em;
+  color: #f05f40;
+}
+
+.album-create-form input{
+  font-size: 2em;
+  width: 100%;
+  height: 100px;
+}
+
+.form-padding {
+  padding-bottom: 25px;
+}
+
+.btn-group-album {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn-group-album button {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-group-album button:hover {
+  background-color: #FFCEC2;
+  color: #3D3D3D;
+}

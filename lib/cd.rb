@@ -11,7 +11,8 @@ class CD
   end
 
   def wiki
-    @album.gsub!(" ", "_")
+    @album_wiki = @album.gsub(" ", "_")
+    @album_wiki
   end
 
   def album
