@@ -11,8 +11,12 @@ class CD
   end
 
   def wiki
-    @album_wiki = @album.gsub(" ", "_")
-    @album_wiki
+    if @album.split.length > 1
+      @album_wiki = @album.gsub(" ", "_")
+      return @album_wiki
+    else
+      return @album
+    end
   end
 
   def album

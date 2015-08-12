@@ -24,3 +24,8 @@ post('/albums') do
   @album_list = CD.all
   erb(:albums)
 end
+
+post('/clear') do
+  CD.clear
+  erb(:albums)
+end
