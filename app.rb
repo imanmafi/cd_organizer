@@ -9,5 +9,18 @@ get('/') do
 end
 
 get('/albums') do
-  @album_list = @@all
+  @album_list
+  erb(:albums)
+end
+
+get('/albums/new') do
+  erb(:album_form)
+end
+
+post('/album_create') do
+  album = params.fetch('album')
+  artist = params.fetch('artist')
+  CD.new(album, artist).save
+  @album_list = CD.all
+  erb(:albums)
 end

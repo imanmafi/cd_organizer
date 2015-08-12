@@ -1,13 +1,13 @@
 class CD
 
   @@all = []
-  @@albums = []
+  @@all_albums = []
   @@all_artists = []
 
   def initialize(album, artist)
     @album = album
     @artist = artist
-    @id = @@all_albums.length + 1
+    @id = @@all.length + 1
   end
 
   def wiki
