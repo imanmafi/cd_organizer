@@ -78,4 +78,11 @@ describe (CD) do
     end
   end
 
+  describe("#wiki") do
+    it ("splits the album into wikipedia ready form") do
+      new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
+      expect(new_album.wiki).to(eq("Led_Zeppelin_IV"))
+    end
+  end
+
 end

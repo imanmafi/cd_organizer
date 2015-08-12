@@ -10,6 +10,10 @@ class CD
     @id = @@all_albums.length + 1
   end
 
+  def wiki
+    @album.gsub!(" ", "_")
+  end
+
   def album
     @album
   end
