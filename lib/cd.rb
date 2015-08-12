@@ -11,11 +11,11 @@ class CD
   end
 
   def wiki
-    if @artist.split.length > 1
-      @artist_wiki = @artist.gsub(" ", "_")
-      return @artist_wiki
+    if @album.split.length > 1
+      @album_wiki = @album.gsub(" ", "_")
+      return @album_wiki
     else
-      return @artist
+      return @album
     end
   end
 

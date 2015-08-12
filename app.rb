@@ -29,3 +29,10 @@ post('/clear') do
   CD.clear
   erb(:albums)
 end
+
+get('/artists/:id') do
+  @album = CD.find(params.fetch('id').to_i())
+  @artist = @album.artist
+  @all_albums = CD.all
+  erb(:artist)
+end
