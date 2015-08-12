@@ -64,4 +64,18 @@ describe (CD) do
     end
   end
 
+  describe('.artist_album_find') do
+    it("finds all albums by one artist") do
+      new_album = CD.new("Led Zeppelin IV", "Led Zeppelin")
+      new_album.save
+      new_album_3 = CD.new("Led Zeppelin III", "Led Zeppelin")
+      new_album_3.save
+      new_album_4 = CD.new("Led Zeppelin II", "Led Zeppelin")
+      new_album_4.save
+      new_album_2 = CD.new("Drones", "Muse")
+      new_album_2.save
+      expect(CD.artist_album_find("Led Zeppelin")).to(eq(["Led Zeppelin IV", "Led Zeppelin III", "Led Zeppelin II"]))
+    end
+  end
+
 end

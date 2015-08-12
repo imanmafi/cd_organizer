@@ -46,6 +46,16 @@ class CD
     @@all_artists = []
   end
 
+  define_singleton_method(:artist_album_find) do |artist|
+    found_albums = []
+    @@all.each do |album|
+      if artist == album.artist
+        found_albums << album.album
+      end
+    end
+    found_albums
+  end
+
   define_singleton_method(:find) do |identification|
     found_album = nil
     @@all.each do |album|
