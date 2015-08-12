@@ -1,0 +1,19 @@
+.page-header {
+  text-align: center;
+  font-size: 5em;
+}
+
+.btn-group-index {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.btn-group-index button {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-group-index button:hover {
+  background-color: #FFCEC2;
+  color: #3D3D3D;
+}
