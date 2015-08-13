@@ -1,0 +1,40 @@
+<h1 class='page-header'>Album List</h1>
+<% if @album_list == nil %>
+<p class="error-message">You haven't added any albums.</p>
+<% else %>
+ <div class="column col-lg-6 listed">
+    <h3>Album</h3>
+    <div class="list-group albums-list">
+      <% @album_list.each do |album| %>
+        <a class="list-group-item" href="https://en.wikipedia.org/wiki/<%= album.wiki %>"><%= album.album %></a>
+      <% end %>
+    </div>
+  </div>
+  <div class="column col-lg-6 listed">
+    <h3>Artist</h3>
+    <div class="list-group albums-list">
+      <% @album_list.each do |album| %>
+        <a class="list-group-item" href="/artists/<%=album.id%>"><%= album.artist %></a>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+
+<div class="column col-md-4 btn-group-album">
+  <form action='/albums/new' class='form-button'>
+      <button type="submit" class="btn btn-primary">Add an Album</button>
+  </form>
+</div>
+
+<div class="column col-md-4 btn-group-album">
+  <form action="/">
+   <button class="btn btn-primary" type="submit">Home</button>
+  </form>
+</div>
+
+<div class="column col-md-4 btn-group-album">
+  <form action="/clear" method='post'>
+   <button class="btn btn-primary" type="submit">Clear List</button>
+  </form>
+</div>

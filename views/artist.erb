@@ -1,0 +1,8 @@
+<h1>Albums From <%= @artist %> </h1>
+<ul>
+  <% @all_albums.each do |album| %>
+    <% if album.artist == @artist %>
+    <li><%= album.album %></li>
+    <% end %>
+  <% end %>
+</ul>
